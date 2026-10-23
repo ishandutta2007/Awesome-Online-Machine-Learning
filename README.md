@@ -73,9 +73,9 @@ The table below compiles leading hosted and enterprise SaaS platforms offering o
 
 ## 💻 Open-Source Projects (Sorted by Stars)
 
-This section documents the premier open-source repositories for incremental learning, concept drift detection, streaming feature extraction, and continual learning. **Each project includes a live GitHub star badge linking to its stargazers page, sorted strictly in descending order by GitHub star count:**
+This section documents the premier open-source repositories for incremental learning, concept drift detection, streaming feature extraction, and continual learning. **Each project includes a live GitHub Stars_Badge linking to its stargazers page, sorted strictly in descending order by GitHub Stars_Count:**
 
-### 1. [scikit-learn](https://github.com/scikit-learn/scikit-learn) [![GitHub stars](https://img.shields.io/github/stars/scikit-learn/scikit-learn?style=social&color=white)](https://github.com/scikit-learn/scikit-learn/stargazers)
+### 1. [scikit-learn](https://github.com/scikit-learn/scikit-learn) [![GitHub_Stars](https://img.shields.io/github/stars/scikit-learn/scikit-learn?style=social&color=white)](https://github.com/scikit-learn/scikit-learn/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Incremental & Out-of-Core Batch Learning
 - **Overview**: Python's cornerstone machine learning package delivers an incremental learning interface via the `partial_fit` API. This allows models to stream mini-batches when datasets exceed available physical RAM.
@@ -85,26 +85,26 @@ This section documents the premier open-source repositories for incremental lear
   - *Clustering & Preprocessing*: `MiniBatchKMeans`, `Birch`, `StandardScaler`, `IncrementalPCA`.
 - **Engineering Nuance**: Classification `partial_fit` requires passing the full set of universe classes (`classes=np.array([...])`) on every call. If an unseen label appears mid-stream without explicit prior registration, scikit-learn raises a `ValueError`. Use stateless tokenizers like `HashingVectorizer` to prevent expanding memory footprints.
 
-### 2. [Apache Spark](https://github.com/apache/spark) [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)
+### 2. [Apache Spark](https://github.com/apache/spark) [![GitHub_Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)
 - **License**: Apache-2.0
 - **Category**: Distributed Streaming Big Data & MLlib
 - **Overview**: Spark Structured Streaming treats continuous data streams as append-only unbounded tables, supporting scalable batch-to-streaming model scoring (`model.transform(streaming_df)`).
 - **Key Capabilities**: Spark MLlib Pipeline API seamlessly unifies feature transformers (e.g., tokenizers, string indexers, vector assemblers) with pre-trained models.
 - **Architectural Trade-offs**: Spark Structured Streaming excels at applying pre-trained models to distributed high-throughput event logs (Kafka, Delta Lake); native per-record continuous online retraining requires integration with external coordination systems.
 
-### 3. [Apache Flink](https://github.com/apache/flink) [![GitHub stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers)
+### 3. [Apache Flink](https://github.com/apache/flink) [![GitHub_Stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers)
 - **License**: Apache-2.0
 - **Category**: Distributed State-Driven Stream Processing & Iteration Engine
 - **Overview**: Flink provides true sub-millisecond, record-at-a-time event stream processing with stateful checkpointing and exactly-once processing guarantees.
 - **Key Capabilities**: Serves as the high-throughput operational backbone for continuous streaming ML loops (consuming event topics, managing stateful sliding windows, emitting model updates to low-latency inference stores).
 
-### 4. [sktime](https://github.com/sktime/sktime) [![GitHub stars](https://img.shields.io/github/stars/sktime/sktime?style=social&color=white)](https://github.com/sktime/sktime/stargazers)
+### 4. [sktime](https://github.com/sktime/sktime) [![GitHub_Stars](https://img.shields.io/github/stars/sktime/sktime?style=social&color=white)](https://github.com/sktime/sktime/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Streaming Time Series & Online Forecasting
 - **Overview**: A unified Python framework for time series analysis providing dedicated interfaces for online/streaming forecasting, recursive model updates, and stream-based anomaly detection.
 - **Key Capabilities**: Wraps streaming forecasters that update internal coefficients on every incoming time tick without refitting historical series; includes sliding-window drift detectors for changing temporal seasonality.
 
-### 5. [Vowpal Wabbit](https://github.com/VowpalWabbit/vowpal_wabbit) [![GitHub stars](https://img.shields.io/github/stars/VowpalWabbit/vowpal_wabbit?style=social&color=white)](https://github.com/VowpalWabbit/vowpal_wabbit/stargazers)
+### 5. [Vowpal Wabbit](https://github.com/VowpalWabbit/vowpal_wabbit) [![GitHub_Stars](https://img.shields.io/github/stars/VowpalWabbit/vowpal_wabbit?style=social&color=white)](https://github.com/VowpalWabbit/vowpal_wabbit/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: High-Performance Out-of-Core & Interactive Learning
 - **Overview**: Originating at Yahoo! Research and accelerated by Microsoft Research, Vowpal Wabbit is an industrial C++ machine learning engine designed for extreme scale, multi-gigabit throughput, and ultra-sparse feature spaces.
@@ -113,19 +113,19 @@ This section documents the premier open-source repositories for incremental lear
   - World-class contextual bandits, active learning, and reinforcement learning reductions (`explore-eval`, `cb_adf`).
   - Seamless Python wrapper (`VWClassifier`, `VWRegressor`) compatible with scikit-learn estimators.
 
-### 6. [Evidently](https://github.com/evidentlyai/evidently) [![GitHub stars](https://img.shields.io/github/stars/evidentlyai/evidently?style=social&color=white)](https://github.com/evidentlyai/evidently/stargazers)
+### 6. [Evidently](https://github.com/evidentlyai/evidently) [![GitHub_Stars](https://img.shields.io/github/stars/evidentlyai/evidently?style=social&color=white)](https://github.com/evidentlyai/evidently/stargazers)
 - **License**: Apache-2.0
 - **Category**: Real-Time ML Observability & Concept Drift Detection
 - **Overview**: Open-source evaluation and monitoring platform for production ML architectures. Evaluates data drift, target drift, covariate shifts, and model decay on streaming inputs.
 - **Key Capabilities**: Generates interactive HTML visual reports, streaming telemetry metrics, and automated alerts when live feature distributions diverge significantly from baseline reference datasets.
 
-### 7. [Numenta NuPIC](https://github.com/numenta/nupic) [![GitHub stars](https://img.shields.io/github/stars/numenta/nupic?style=social&color=white)](https://github.com/numenta/nupic/stargazers)
+### 7. [Numenta NuPIC](https://github.com/numenta/nupic) [![GitHub_Stars](https://img.shields.io/github/stars/numenta/nupic?style=social&color=white)](https://github.com/numenta/nupic/stargazers)
 - **License**: AGPL-3.0
 - **Category**: Hierarchical Temporal Memory (HTM) & Biologically-Inspired Online Learning
 - **Overview**: Implements Hierarchical Temporal Memory (HTM) cortical learning algorithms in C++ and Python. Models learn continuously from streaming spatial-temporal patterns one sample at a time.
 - **Key Capabilities**: Unsupervised real-time anomaly detection, online temporal prediction, and automatic continuous adaptation without distinct offline training phases.
 
-### 8. [River](https://github.com/online-ml/river) [![GitHub stars](https://img.shields.io/github/stars/online-ml/river?style=social&color=white)](https://github.com/online-ml/river/stargazers)
+### 8. [River](https://github.com/online-ml/river) [![GitHub_Stars](https://img.shields.io/github/stars/online-ml/river?style=social&color=white)](https://github.com/online-ml/river/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Pure Online Machine Learning for Python
 - **Overview**: The gold standard for pure streaming machine learning in Python, forged from the union of `creme` and `scikit-multiflow`. River processes data **one single observation at a time** using native Python dictionaries.
@@ -135,19 +135,19 @@ This section documents the premier open-source repositories for incremental lear
   - Streaming anomaly detection (Half-Space Trees), online clustering, and rolling metrics calculated on unbounded streams.
   - High speed in streaming contexts because dictionary inputs bypass the dense array conversion overhead and fixed feature constraints of traditional batch libraries.
 
-### 9. [whylogs](https://github.com/whylabs/whylogs) [![GitHub stars](https://img.shields.io/github/stars/whylabs/whylogs?style=social&color=white)](https://github.com/whylabs/whylogs/stargazers)
+### 9. [whylogs](https://github.com/whylabs/whylogs) [![GitHub_Stars](https://img.shields.io/github/stars/whylabs/whylogs?style=social&color=white)](https://github.com/whylabs/whylogs/stargazers)
 - **License**: Apache-2.0
 - **Category**: Statistical Profiling & Streaming Data Drift Logging
 - **Overview**: The open standard for data logging and statistical profiling. Enables deterministic, zero-dependency statistical summaries of continuous high-volume streaming data with mergeable sketch algorithms.
 - **Key Capabilities**: Operates in sub-millisecond execution times with bounded memory; tracks null rates, quantile drift, cardinality, and schema mutations without storing raw rows.
 
-### 10. [Alibi Detect](https://github.com/SeldonIO/alibi-detect) [![GitHub stars](https://img.shields.io/github/stars/SeldonIO/alibi-detect?style=social&color=white)](https://github.com/SeldonIO/alibi-detect/stargazers)
+### 10. [Alibi Detect](https://github.com/SeldonIO/alibi-detect) [![GitHub_Stars](https://img.shields.io/github/stars/SeldonIO/alibi-detect?style=social&color=white)](https://github.com/SeldonIO/alibi-detect/stargazers)
 - **License**: Apache-2.0
 - **Category**: Outlier, Adversarial & Drift Detection
 - **Overview**: Developed by Seldon, Alibi Detect focuses on detecting anomalies and distribution shifts for tabular data, natural language, and computer vision models.
 - **Key Capabilities**: Online detectors with sequential testing (CUSUM, Page-Hinkley), Maximum Mean Discrepancy (MMD), Kolmogorov-Smirnov, and Learned Kernel drift detection on streaming payloads.
 
-### 11. [Avalanche](https://github.com/ContinualAI/avalanche) [![GitHub stars](https://img.shields.io/github/stars/ContinualAI/avalanche?style=social&color=white)](https://github.com/ContinualAI/avalanche/stargazers)
+### 11. [Avalanche](https://github.com/ContinualAI/avalanche) [![GitHub_Stars](https://img.shields.io/github/stars/ContinualAI/avalanche?style=social&color=white)](https://github.com/ContinualAI/avalanche/stargazers)
 - **License**: MIT
 - **Category**: PyTorch-Based Continual & Lifelong Learning
 - **Overview**: Developed by the ContinualAI community, Avalanche is an end-to-end continual learning framework designed to solve **catastrophic forgetting** during sequential and online deep learning.
@@ -155,49 +155,49 @@ This section documents the premier open-source repositories for incremental lear
   - Continual learning strategies: Replay buffers, EWC (Elastic Weight Consolidation), GEM, Synaptic Intelligence, and Learning without Forgetting (LwF).
   - Standard continual learning benchmarks (Split-MNIST, Permuted-MNIST, Core50) with customizable streaming evaluation metrics.
 
-### 12. [Streamz](https://github.com/python-streamz/streamz) [![GitHub stars](https://img.shields.io/github/stars/python-streamz/streamz?style=social&color=white)](https://github.com/python-streamz/streamz/stargazers)
+### 12. [Streamz](https://github.com/python-streamz/streamz) [![GitHub_Stars](https://img.shields.io/github/stars/python-streamz/streamz?style=social&color=white)](https://github.com/python-streamz/streamz/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Event-Driven Streaming Data Pipelines
 - **Overview**: A lightweight Python library for assembling real-time streaming pipelines. Streamz manages continuous streams of data, combining branching, buffering, windowing, and streaming ML inference.
 - **Key Capabilities**: Seamlessly integrates with Dask, Kafka, Tornado, and Pandas to route event records through incremental transformation pipelines and online scoring models.
 
-### 13. [Dask-ML](https://github.com/dask/dask-ml) [![GitHub stars](https://img.shields.io/github/stars/dask/dask-ml?style=social&color=white)](https://github.com/dask/dask-ml/stargazers)
+### 13. [Dask-ML](https://github.com/dask/dask-ml) [![GitHub_Stars](https://img.shields.io/github/stars/dask/dask-ml?style=social&color=white)](https://github.com/dask/dask-ml/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Scalable Out-of-Core Machine Learning
 - **Overview**: Provides distributed and out-of-core machine learning algorithms that scale NumPy and Pandas across parallel clusters via Dask.
 - **Key Capabilities**: Implements `Incremental` meta-estimators that wrap scikit-learn estimators supporting `partial_fit`, orchestrating out-of-core mini-batch updates across multi-gigabyte or terabyte disk partitions.
 
-### 14. [scikit-multiflow](https://github.com/scikit-multiflow/scikit-multiflow) [![GitHub stars](https://img.shields.io/github/stars/scikit-multiflow/scikit-multiflow?style=social&color=white)](https://github.com/scikit-multiflow/scikit-multiflow/stargazers)
+### 14. [scikit-multiflow](https://github.com/scikit-multiflow/scikit-multiflow) [![GitHub_Stars](https://img.shields.io/github/stars/scikit-multiflow/scikit-multiflow?style=social&color=white)](https://github.com/scikit-multiflow/scikit-multiflow/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Multi-Output Stream Mining *(Historical / Merged into River)*
 - **Overview**: Created by Telecom ParisTech and Montanuniversitat Leoben for streaming data mining, concept drift detection, and multi-output learning.
 - **Significance**: Provided foundational streaming tree algorithms (Hoeffding Tree, HAT) that were subsequently merged with `creme` to build the unified `River` ecosystem.
 
-### 15. [MOA (Massive Online Analysis)](https://github.com/Waikato/moa) [![GitHub stars](https://img.shields.io/github/stars/Waikato/moa?style=social&color=white)](https://github.com/Waikato/moa/stargazers)
+### 15. [MOA (Massive Online Analysis)](https://github.com/Waikato/moa) [![GitHub_Stars](https://img.shields.io/github/stars/Waikato/moa?style=social&color=white)](https://github.com/Waikato/moa/stargazers)
 - **License**: GNU GPLv3
 - **Category**: Academic Stream Mining Engine (Java)
 - **Overview**: Originating from the University of Waikato (home of WEKA), MOA is the classic academic open-source framework for massive data stream mining.
 - **Key Capabilities**: Comprehensive collection of streaming algorithms for classification, regression, clustering, outlier detection, and concept drift evaluation (prequential evaluation).
 
-### 16. [Apache Flink ML](https://github.com/apache/flink-ml) [![GitHub stars](https://img.shields.io/github/stars/apache/flink-ml?style=social&color=white)](https://github.com/apache/flink-ml/stargazers)
+### 16. [Apache Flink ML](https://github.com/apache/flink-ml) [![GitHub_Stars](https://img.shields.io/github/stars/apache/flink-ml?style=social&color=white)](https://github.com/apache/flink-ml/stargazers)
 - **License**: Apache-2.0
 - **Category**: Distributed Online Machine Learning Library
 - **Overview**: The official machine learning library of the Apache Flink project, engineered for unified iteration and real-time streaming ML pipelines.
 - **Key Capabilities**: Features native streaming algorithms (K-Means, Logistic Regression, Naive Bayes, KNN), Estimator/Transformer abstractions, and a Python SDK (`apache-flink-ml`). Business feedback loops train continuously on incremental Kafka records and version updates to serving layers without downtime.
 
-### 17. [Frouros](https://github.com/IFCA-Advanced-Computing/frouros) [![GitHub stars](https://img.shields.io/github/stars/IFCA-Advanced-Computing/frouros?style=social&color=white)](https://github.com/IFCA-Advanced-Computing/frouros/stargazers)
+### 17. [Frouros](https://github.com/IFCA-Advanced-Computing/frouros) [![GitHub_Stars](https://img.shields.io/github/stars/IFCA-Advanced-Computing/frouros?style=social&color=white)](https://github.com/IFCA-Advanced-Computing/frouros/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: Python Concept Drift Detection Library
 - **Overview**: Maintained by IFCA Advanced Computing, Frouros delivers a modular open-source library dedicated to detecting concept drift and data drift in machine learning workflows.
 - **Key Capabilities**: Implements both streaming/online detectors (DDM, EDDM, Page-Hinkley, ADWIN, STEPD) and batch-oriented statistical tests (Cramer-von Mises, Kolmogorov-Smirnov, Earth Mover's Distance).
 
-### 18. [River-Torch](https://github.com/online-ml/river-torch) [![GitHub stars](https://img.shields.io/github/stars/online-ml/river-torch?style=social&color=white)](https://github.com/online-ml/river-torch/stargazers)
+### 18. [River-Torch](https://github.com/online-ml/river-torch) [![GitHub_Stars](https://img.shields.io/github/stars/online-ml/river-torch?style=social&color=white)](https://github.com/online-ml/river-torch/stargazers)
 - **License**: BSD-3-Clause
 - **Category**: PyTorch Deep Learning Extension for River
 - **Overview**: Developed by the River core maintainers to bridge PyTorch neural network modules into River's single-instance streaming pipelines.
 - **Key Capabilities**: Wraps arbitrary `torch.nn.Module` architectures with PyTorch optimizers and loss functions, allowing deep learning practitioners to evaluate neural nets under true online data streaming conditions.
 
-### 19. [LIBOL](https://github.com/LIBOL/LIBOL) [![GitHub stars](https://img.shields.io/github/stars/LIBOL/LIBOL?style=social&color=white)](https://github.com/LIBOL/LIBOL/stargazers)
+### 19. [LIBOL](https://github.com/LIBOL/LIBOL) [![GitHub_Stars](https://img.shields.io/github/stars/LIBOL/LIBOL?style=social&color=white)](https://github.com/LIBOL/LIBOL/stargazers)
 - **License**: GNU GPLv3
 - **Category**: Academic Online Learning Library (C++ / MATLAB)
 - **Overview**: Library for Online Learning Algorithms, authored by Steven Hoi and collaborators. A historical reference implementing foundational linear online algorithms (Perceptron, Passive-Aggressive, Second-Order Perceptron, Confidence Weighted).
@@ -235,7 +235,7 @@ We welcome additions, fixes, and ecosystem enhancements! To contribute:
 
 1. 🍴 **Fork this repository** to your GitHub account.
 2. 🌿 **Create a descriptive feature branch**: `git checkout -b add-my-tool`.
-3. 📝 **Add your entry** to [README.md](README.md) following existing formatting conventions (ensure exact pricing and free tier limits are stated for SaaS; ensure verified star counts and social badge links are present for open-source).
+3. 📝 **Add your entry** to [README.md](README.md) following existing formatting conventions (ensure exact pricing and free tier limits are stated for SaaS; ensure verified Stars_Counts and social badge links are present for open-source).
 4. 📬 **Submit a Pull Request** with a concise description of why the tool is valuable for online machine learning.
 
 > ⭐ **Discover more awesome curated lists at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)!**
